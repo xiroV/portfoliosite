@@ -1,0 +1,5 @@
+# Auto convert line endings
+* text=auto
+
+*.tex text
+*.java text

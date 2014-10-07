@@ -1,0 +1,16 @@
+*.pdf
+*.aux
+*.log
+*.synctex.gz
+*.toc
+!Litteratur/*
+*.nav
+*.out
+*.snm
+# Filer fra theorem og andre pakker
+*.fls
+*.thm
+*.dvi
+*.bbl
+*.blg
+!ds-impl/junit-4.10.jar
