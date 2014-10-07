@@ -1,5 +1,8 @@
 ## About the project
-Project in Interaction Design.
+Project for the Interaction Design course.
+
+The project consists of a website for people who wants to create their own portfolio.
+The website should also contain functionality for browsing/searching through portfolios, to find potential employees.
 
 ## The model
 Our model is a website (written in HTML, CSS and Python).
