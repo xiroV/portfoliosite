@@ -12,9 +12,15 @@ Required modules is needed:
 
 ### How to start the site
 
-Edit portfoliosite.conf and change the tools.staticdir.root parameter according to your own local path.
+Edit portfoliosite.conf and change the tools.staticdir.root parameter according to your local path to the project folder.
 
-Run
+Run to start the webserver
 ```
 python portfoliosite.py
 ```
+
+If no errors occurs, the website should be accessible at
+```
+localhost:8080
+```
+
