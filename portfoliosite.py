@@ -1,5 +1,4 @@
 import cherrypy
-import os
 from jinja2 import Environment, PackageLoader
 env = Environment(loader=PackageLoader('portfoliosite', 'template'))
 template = env.get_template('main.html')
