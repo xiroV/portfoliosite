@@ -14,3 +14,4 @@
 *.bbl
 *.blg
 !ds-impl/junit-4.10.jar
+!__pycache__/*
