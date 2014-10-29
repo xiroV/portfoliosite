@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
 /*** RESET ***/
 * {margin:0;padding:0;border-collapse:collapse;border-spacing:0;border:0;font-style:normal;font-weight:normal;list-style:none;text-align:left;font-size:100%;}
 
@@ -23,6 +23,7 @@ header, footer {
 	font-size: 1em;
 	background-color:rgba(0, 0, 0, 0.5);
 	color: #fff;
+    width: 100%;
 }
 
 header ul {
@@ -30,7 +31,7 @@ header ul {
 }
 
 header ul:first-of-type {
-	font-family: Arvo;
+	font-family: Merriweather;
 }
 
 em {
@@ -53,12 +54,16 @@ html, body {
 
 header {
 	margin: 0px auto;
-	width: 80%;
 	top: 0;
 }
 
+nav {
+    width: 1220px;
+    margin: 0px auto;
+}
+
 nav ul li {
-	padding: 15px;
+    line-height: 3em;
 }
 
 nav ul:first-of-type {
@@ -73,52 +78,15 @@ nav ul li {
 	float: left;
 }
 
-nav ul li a {
-	padding: 10px 20px;
-	margin: 0px 0px 0px 0px;
+nav ul li a, footer ul li a {
+    color: #fff;
+    display: block;
+    padding: 0px 20px;
 }
 
-nav ul li a:hover {
-	background: #add138;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+nav ul li a:hover, footer ul li a:hover {
+	background: #888
 }
-
-nav ul li ul {
-
-}
-
-nav ul li ul li:last-of-type a:hover {
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-nav ul li ul:hover {
-	display: block;
-	visibility: visible;
-	opacity: 1;
-}
-
-nav ul li:hover ul, nav ul li:active ul {
-	display: block;
-	visibility: visible;
-	opacity: 1;
-}
-
-nav ul li ul li {
-	display: block;
-	float: none;
-}
-
-nav ul li ul li a {
-	padding: 3px 20px;
-	display: block;
-}
-
-nav ul li ul li a:hover {
-	border-radius: 0px;
-}
-
 a {
 	text-decoration: none;
 	color: #000;
@@ -127,18 +95,20 @@ a {
 footer {
 	position: absolute;
 	bottom: 0;
-	width: 80%;
+	width:100%;
 	text-align: right;
-	left: 10%;
+    margin: 0px auto 0 auto;
 }
 
 footer ul {
 	text-align: right;
+    width: 1220px;
+    margin: 0px auto;
 }
 
 footer ul li {
 	text-align: right;
-	padding: 15px;
+    line-height: 3em;
 }
 
 footer ul li {
@@ -146,9 +116,8 @@ footer ul li {
 }
 
 section.content {
-	margin: 20px auto 0px auto;
-	padding: 1%;
-	width: 78%;
+	margin: 40px auto 80px auto;
+	width: 1180px;
 	line-height: 1.8em;
 }
 
@@ -191,11 +160,18 @@ select {
 	width: 100%;
 	padding: 2%;
 	border: 1px solid #444;
-	background: #ddd;
+	background: #fff;
 }
 
 select option {
 	padding: 2%;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-family: Merriweather;
+    font-weight: 300;
+    color: #000;
 }
 
 h2 {

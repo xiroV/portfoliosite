@@ -31,6 +31,7 @@ class PortfolioSite(object):
 	def login(self):
 		content = '''
 			<form method="post" action="/login" class="login">
+				<h1>Log ind</h1>
 				<label for="username">Brugernavn</label>
 				<input type="text" name="username" id="username" />
 				<label for="password">Kodeord</label>
@@ -39,7 +40,31 @@ class PortfolioSite(object):
 				<div class="clear"></div>
 			</form>
 		'''
+
+		return template.render(content = content)
+
+	@cherrypy.expose
+	def register(self):
+		content = '''
+			Her kan du registrere en ny bruger..
+		'''
+
+		return template.render(content = content)
 		
+	@cherrypy.expose
+	def about(self):
+		content = '''
+			Her kan du læse om siden..
+		'''
+
+		return template.render(content = content)
+		
+	@cherrypy.expose
+	def help(self):
+		content = '''
+			Her kan du få hjælp..
+		'''
+
 		return template.render(content = content)
 
 cherrypy.quickstart(PortfolioSite(), '/', '/home/xirov/sdu/interaktionsdesign/project/portfoliosite.conf')
