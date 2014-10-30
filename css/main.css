@@ -21,13 +21,19 @@ input, select {
 
 header, footer {
 	font-size: 1em;
-	background-color:rgba(0, 0, 0, 0.5);
 	color: #fff;
     width: 100%;
-}
+    min-width: 1220px;
+    
+background: #396072; /* Old browsers */
+background: -moz-linear-gradient(top,  #396072 0%, #5074a0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#396072), color-stop(100%,#5074a0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #396072 0%,#5074a0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #396072 0%,#5074a0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #396072 0%,#5074a0 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #396072 0%,#5074a0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#396072', endColorstr='#5074a0',GradientType=0 ); /* IE6-9 */
 
-header ul {
-	opacity: 1;
 }
 
 header ul:first-of-type {
@@ -85,11 +91,19 @@ nav ul li a, footer ul li a {
 }
 
 nav ul li a:hover, footer ul li a:hover {
-	background: #888
+	background: #5074a0;
+    color: #fff;
+    text-decoration: none;
 }
+
 a {
 	text-decoration: none;
-	color: #000;
+	color: #297b96;
+}
+
+a:hover {
+    color: #3fc0eb;
+    text-decoration: underline;
 }
 
 footer {
@@ -116,9 +130,10 @@ footer ul li {
 }
 
 section.content {
-	margin: 40px auto 80px auto;
+	margin: 40px auto 0px auto;
 	width: 1180px;
 	line-height: 1.8em;
+    padding-bottom: 120px;
 }
 
 label {
@@ -132,19 +147,24 @@ form.login {
 }
 
 form.search {
-	width: 40%;
+	width: 559px;
 	margin: 5% auto;
 }
 
-input {
+input, select {
 	box-shadow: 0 1px 2px #888;
 }
 
 input[type="text"], input[type="password"] {
 	border: 1px solid #444;
 	font-size: 1.2em;
-	padding: 1%;
-	width: 98%;
+	padding: 5px;
+    width: 500px;
+    font-family: PT Sans;
+}
+
+form.login input[type="text"], form.login input[type="password"] {
+    width: 98%;
 }
 
 input[type="submit"] {
@@ -156,15 +176,28 @@ input[type="submit"] {
 	background: #eee;
 }
 
+input[type="submit"]:hover {
+    background: #fff;
+}
+
+input[type="submit"].sameline {
+    margin: 0px;
+}
+
+.sameline {
+    float: left;
+}
+
 select {
-	width: 100%;
-	padding: 2%;
+    width: 400px;
+	padding: 9px;
 	border: 1px solid #444;
 	background: #fff;
+    margin-right: 2px;
 }
 
 select option {
-	padding: 2%;
+	padding: 10px;
 }
 
 h1 {
@@ -172,6 +205,7 @@ h1 {
     font-family: Merriweather;
     font-weight: 300;
     color: #000;
+    line-height: 1.8em;
 }
 
 h2 {
