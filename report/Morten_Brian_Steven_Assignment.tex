@@ -16,6 +16,9 @@
 \usepackage{ulem}
 \usepackage{pdfpages}
 
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
+
 \DeclareGraphicsExtensions{.png}
 
 \definecolor{dkgreen}{rgb}{0,0.45,0}
@@ -93,7 +96,7 @@ Vi prøver så vidt muligt at ramme en kreativ erhvervs gruppe der med henblik p
 \section{Hvad er brugernes behov?}
 En nem og hurtig portfolie til at vise frem, uden at skulle lave en hel hjemmeside selv. En side hvor man kan fremvise sin kunnen, sine personlige oplysninger og ting man gerne vil have en anden person skal se, som personen hurtigt og visuelt nemt kan danne sig et overblik over.
 
-\section{Hvilke krav stiller dette til vores løsning}
+\section{Krav til vores løsning}
 \begin{itemize}
 	\item Vores side skal være nemt tilgængelig
 	\item Vores layout skal være visuelt overskueligt
@@ -111,7 +114,7 @@ En nem og hurtig portfolie til at vise frem, uden at skulle lave en hel hjemmesi
 \end{itemize}
 
 \section{Konceptuel model}
-
+For at opfylde ovenstående krav til vores løsning, er det vigtigt at siden holdes så simpel som muligt for at holde alt overskueligt. At gøre siden overskuelig kan bl.a. gøres ved at alle sidens "hovedfunktioner" gøres tilgængelig fra alle andre sider (f.eks. log ind-siden, søgefunktionalitet, osv.). En god måde at gøre dette på, er ved at holde en ens "header" og "footer" på alle sider. Herunder er nogle skitser af nogle af hjemmesidens vigtigste features:
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{startside.jpg}
 \caption{Startside hvor man kan søge på portfolier}
@@ -124,7 +127,7 @@ En nem og hurtig portfolie til at vise frem, uden at skulle lave en hel hjemmesi
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{mainside.jpg}
-\caption{Her ses portfilen hvor man kan tiløje og gennemse gemte projekter}
+\caption{Her ses portfolien, den vigtigste feature i vores løsning, hvor man kan tiløje og gennemse gemte projekter}
 \end{figure}
 
 \section{Personas}
@@ -156,5 +159,79 @@ George er en travl middelaldrende mand som er født i Skotland og kommet til Dan
 \end{description}
 \paragraph{Baggrund}\hfill\\
 Betina er en frisk dame i sin bedste alder arbejdsmæssigt, og har flair for mennesker som hendes arbejde hovedsageligt handler om. Hun er udadvendt og smilende, tager gerne en udfordring op og er ikke bange for det heller. Betina er bosat med sin mand og to børn, og har en et godt sundt familieliv.
+
+\section{Test af prototyper}
+
+\subsection{Prototype 1}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{hjemmesidedesign1.png}
+	
+\end{figure}
+
+\subsubsection{Fordele}
+
+\begin{itemize}
+	\item Let tilgængelig søgefunktion.
+	\item Det fremgår tydeligt hvis portfolie man er inde på.
+	\item Overskueligt og nemt at tilgå diverse funktioner.
+\end{itemize}
+
+\subsubsection{Ulemper}
+\begin{itemize}
+	\item Svært at finde et specifikt billede i et projekt med mange billeder. 
+	\item Forvirrende med både horisontale og vertikale lister
+	\item Manglende information om indholdet i projekterne
+\end{itemize}
+
+\subsection{Prototype 2}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Prototype_1_not_logged_in.png}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Prototype_1_logged_in.png}
+\end{figure}
+
+\subsubsection{Fordele}
+\begin{itemize}
+	\item Let tingængelig søgefunktion
+	\item Simpelt og overskueligt
+	\item Nemt at tilføje/slette projekter og billeder
+\end{itemize}
+
+\subsubsection{Ulemper}
+\begin{itemize}
+	\item For mange elementer på skærmen af gangen
+	\item Scroll bar bliver muligvis et problem
+	\item Manglende infirmation om inholdet i projekterne
+\end{itemize}
+
+\subsection{Prototype 3}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Sketch2_1.png}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Sketch2_2.png}
+\end{figure}
+
+\subsubsection{Fordele}
+\begin{itemize}
+	\item God information omkring projekterne
+	\item Der er et minimum af elementer på siderne af gangen
+\end{itemize}
+
+\subsubsection{Ulemper}
+\begin{itemize}
+	\item Det er ikke nemt at tilgå et nyt projekt
+\end{itemize}
+
+\section{Valg af design}
+
+Vi har valgt Prototype 3, vi vil dog impementere tandhjulene fra Prototype 2 som gør det redigere i ens projektor. Tilmed vil vi også implementere tilføj billede/projekt fra Prototype 2 når man er logget ind på sin egen bruger. Vi vil også implementere de to bokse med Kreatørens navn og Hjemmesidens navn fra prototype 1, så det bliver let at se hvis portfolie man er inde på. Header og footer fra bliver også tilføjet til prototypen, i stil med prototype 1/2.
+
 
 \end{document}
