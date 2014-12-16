@@ -1,11 +1,20 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Cantarell:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
+
+/**
+	dark-blue: #396f91;
+	med-blue: #4385ab;
+	light-blue: #4d98c4;
+	bright-blue: #57acde;
+*/
+
+
 /*** RESET ***/
 * {margin:0;padding:0;border-collapse:collapse;border-spacing:0;border:0;font-style:normal;font-weight:normal;list-style:none;text-align:left;font-size:100%;}
 
 html {
 	background: #eee;
-	font-family: PT Sans;
+	font-family: Cantarell;
 	font-size: 1.2em;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -15,7 +24,7 @@ strong {
 }
 
 input, select {
-	font-family: PT Sans;
+	font-family: Cantarell;
 	font-size: 1em;
 }
 
@@ -23,17 +32,8 @@ header, footer {
 	font-size: 1em;
 	color: #fff;
     width: 100%;
-    min-width: 1220px;
-    
-background: #396072; /* Old browsers */
-background: -moz-linear-gradient(top,  #396072 0%, #5074a0 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#396072), color-stop(100%,#5074a0)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #396072 0%,#5074a0 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #396072 0%,#5074a0 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #396072 0%,#5074a0 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #396072 0%,#5074a0 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#396072', endColorstr='#5074a0',GradientType=0 ); /* IE6-9 */
-
+    min-width: 1000px;
+	background: #396f91;
 }
 
 header ul:first-of-type {
@@ -64,7 +64,7 @@ header {
 }
 
 nav {
-    width: 1220px;
+    width: 1000px;
     margin: 0px auto;
 }
 
@@ -91,19 +91,19 @@ nav ul li a, footer ul li a {
 }
 
 nav ul li a:hover, footer ul li a:hover {
-	background: #5074a0;
+	background: #4383ab;
     color: #fff;
     text-decoration: none;
 }
 
 a {
 	text-decoration: none;
-	color: #297b96;
+	color: #4383ab;
 }
 
 a:hover {
-    color: #3fc0eb;
-    text-decoration: underline;
+    color: #57acde;
+    text-decoration: none;
 }
 
 footer {
@@ -116,7 +116,7 @@ footer {
 
 footer ul {
 	text-align: right;
-    width: 1220px;
+    width: 1000px;
     margin: 0px auto;
 }
 
@@ -131,7 +131,7 @@ footer ul li {
 
 section.content {
 	margin: 40px auto 0px auto;
-	width: 1180px;
+	width: 980px;
 	line-height: 1.8em;
     padding-bottom: 120px;
 }
@@ -151,16 +151,18 @@ form.search {
 	margin: 5% auto;
 }
 
-input, select {
-	box-shadow: 0 1px 2px #888;
+input:active, input:focus, select:active {
+	outline-color: #4d98c4;
+	border:1px solid #4d98c4;
+	box-shadow: 0 0 3px #4d98c4;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
 	border: 1px solid #444;
 	font-size: 1.2em;
 	padding: 5px;
-    width: 500px;
-    font-family: PT Sans;
+    width: 400px;
+    font-family: Cantarell;
 }
 
 form.login input[type="text"], form.login input[type="password"] {
@@ -169,15 +171,16 @@ form.login input[type="text"], form.login input[type="password"] {
 
 input[type="submit"] {
 	float: right;
-	border: 1px solid #444;
-	border-radius: 2px;
+	border: 1px solid #222;
+	border-radius: 3px;
 	padding: 10px 30px;
-	margin: 20px 0px 0px 0px;	
-	background: #eee;
+	margin: 20px 0px 0px 0px;
+	background: #4385ab;
+	color: #fff;
 }
 
 input[type="submit"]:hover {
-    background: #fff;
+    background: #4d98c4;
 }
 
 input[type="submit"].sameline {
@@ -189,7 +192,7 @@ input[type="submit"].sameline {
 }
 
 select {
-    width: 400px;
+    width: 390px;
 	padding: 9px;
 	border: 1px solid #444;
 	background: #fff;
@@ -216,4 +219,38 @@ h2 {
 
 .clear {
 	clear: both;
+}
+
+a.project {
+	display: block;
+	color: #000;
+	border-top: 1px solid #444;
+	padding: 10px;
+}
+
+a.project:hover {
+	background: #f6f6f6;
+}
+
+a.project:last-of-type {
+	border-bottom: 1px solid #444;
+}
+
+a.project div.information {
+	float: left;
+	margin-left: 20px;
+}
+
+a.project div.name {
+	font-size: 1.2em;
+}
+
+a.project div.image {
+	border: 3px dashed #aaa;
+	float:left;
+	width: 180px;
+	height: 120px;
+}
+
+a.project div.description {
 }
