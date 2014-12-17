@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Cantarell:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,300);
 
 /**
 	dark-blue: #396f91;
@@ -14,8 +14,8 @@
 
 html {
 	background: #eee;
-	font-family: Cantarell;
-	font-size: 1.2em;
+	font-family: Raleway;
+	font-size: 1em;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -24,12 +24,11 @@ strong {
 }
 
 input, select {
-	font-family: Cantarell;
+	font-family: Raleway;
 	font-size: 1em;
 }
 
 header, footer {
-	font-size: 1em;
 	color: #fff;
     width: 100%;
     min-width: 1000px;
@@ -37,7 +36,7 @@ header, footer {
 }
 
 header ul:first-of-type {
-	font-family: Merriweather;
+	font-family: Droid Serif;
 }
 
 em {
@@ -162,7 +161,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 	font-size: 1.2em;
 	padding: 5px;
     width: 400px;
-    font-family: Cantarell;
+    font-family: Raleway;
 }
 
 form.login input[type="text"], form.login input[type="password"] {
@@ -204,15 +203,15 @@ select option {
 }
 
 h1 {
-    font-size: 1.8em;
-    font-family: Merriweather;
+    font-size: 1.4em;
+    font-family: Raleway;
     font-weight: 300;
     color: #000;
     line-height: 1.8em;
 }
 
 h2 {
-	font-size: 1.8em;
+	font-size: 1.2em;
 	font-family: 'texgy';
 	padding-bottom: 15px;
 }
@@ -245,12 +244,12 @@ a.project div.name {
 	font-size: 1.2em;
 }
 
-a.project div.image {
-	border: 3px dashed #aaa;
-	float:left;
-	width: 180px;
-	height: 120px;
+a.project img {
+	float: left;
+	width: 175px;
+	height: 100px;
 }
 
-a.project div.description {
+.projectEnd {
+	border-bottom: 1px solid #444;
 }

@@ -2,6 +2,7 @@ import cherrypy, re
 from jinja2 import Environment, PackageLoader
 env = Environment(loader=PackageLoader('portfoliosite', 'template'))
 template = env.get_template('main.html')
+project_template = env.get_template('project.html')
 
 class PortfolioSite(object):
 	@cherrypy.expose
@@ -94,19 +95,36 @@ class PortfolioSite(object):
 		
 		projects = [['Medieval warrior character design', 'Some description'],['Female character design', 'another description']]
 		
+		project_num = 0
 		for project in projects:
 			content += '''
-				<a class="project" href="">
-					<div class="image"></div>
+				<a class="project" href="/img/portfolio/1/1.jpg" data-fancybox-group="thumb%s" title="This is some description">
+					<img src="/img/portfolio/1/thumbs/1.jpg" />
 					<div class="information">
 						<div class="name">%s</div>
 						<div class="description">%s</div>
 					</div>
 					<div class="clear"></div>
 				</a>
-			''' % (project[0], project[1])
-		
+				
+			''' % (str(project_num), project[0], project[1])
+			content += '''
+				<a class="project" style="display: none;" href="/img/portfolio/1/1.jpg" data-fancybox-group="thumb%d">
+					<img src="/img/portfolio/1/thumbs/1.jpg" />
+				</a>
+				<a class="project" style="display: none;" href="/img/portfolio/1/1.jpg" data-fancybox-group="thumb%d">
+					<img src="/img/portfolio/1/thumbs/1.jpg" />
+				</a>
+			''' % (project_num, project_num)
+			
+			project_num += 1
+			
+		content += '<div class="projectEnd"></div>'
 		return template.render(content = content)
 		
+	@cherrypy.expose
+	def project(self, project_id):
+		content = project_id
+		return project_template.render(content = content)		
 
 cherrypy.quickstart(PortfolioSite(), '/', '/home/xirov/sdu/interaktionsdesign/project/portfoliosite.conf')
