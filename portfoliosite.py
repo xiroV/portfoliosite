@@ -2,7 +2,6 @@ import cherrypy, re
 from jinja2 import Environment, PackageLoader
 env = Environment(loader=PackageLoader('portfoliosite', 'template'))
 template = env.get_template('main.html')
-project_template = env.get_template('project.html')
 
 class PortfolioSite(object):
 	@cherrypy.expose
@@ -20,6 +19,8 @@ class PortfolioSite(object):
 				</select>
 				<input type="submit" class="sameline" value="Find person" />
 				<div class="clear"></div>
+				<br />
+				<div class="center"><a href="/portfolio/Markus_Lund's_Portfolio">Test Portfolio</a></div>
 			</form>
 		'''
 
@@ -93,13 +94,13 @@ class PortfolioSite(object):
 		content += fixed_name
 		content += '</h1>'
 		
-		projects = [['Medieval warrior character design', 'Some description'],['Female character design', 'another description']]
+		projects = [['Female Character Design', 'Description of project for Female character design'],['Survivor Character Design', 'Project description of project for Survivor character design'],['Medieval Character Design', 'Project description of project for Medieval character design']]
 		
-		project_num = 0
+		project_num = 1
 		for project in projects:
 			content += '''
-				<a class="project" href="/img/portfolio/1/1.jpg" data-fancybox-group="thumb%s" title="This is some description">
-					<img src="/img/portfolio/1/thumbs/1.jpg" />
+				<a class="project" href="/img/portfolio/%d/1.png" data-fancybox-group="thumb%s" title="This is some description">
+					<img src="/img/portfolio/%s/thumbs/1.png" />
 					<div class="information">
 						<div class="name">%s</div>
 						<div class="description">%s</div>
@@ -107,24 +108,29 @@ class PortfolioSite(object):
 					<div class="clear"></div>
 				</a>
 				
-			''' % (str(project_num), project[0], project[1])
+			''' % (project_num, str(project_num), str(project_num), project[0], project[1])
 			content += '''
-				<a class="project" style="display: none;" href="/img/portfolio/1/1.jpg" data-fancybox-group="thumb%d">
-					<img src="/img/portfolio/1/thumbs/1.jpg" />
+				<a class="project" style="display: none;" href="/img/portfolio/%d/2.png" data-fancybox-group="thumb%d">
+					<img src="/img/portfolio/%d/thumbs/2.png" />
 				</a>
-				<a class="project" style="display: none;" href="/img/portfolio/1/1.jpg" data-fancybox-group="thumb%d">
-					<img src="/img/portfolio/1/thumbs/1.jpg" />
+				<a class="project" style="display: none;" href="/img/portfolio/%d/3.png" data-fancybox-group="thumb%d">
+					<img src="/img/portfolio/%d/thumbs/3.png" />
 				</a>
-			''' % (project_num, project_num)
+				<a class="project" style="display: none;" href="/img/portfolio/%d/4.png" data-fancybox-group="thumb%d">
+					<img src="/img/portfolio/%d/thumbs/4.png" />
+				</a>
+			''' % (project_num, project_num, project_num, project_num, project_num, project_num, project_num, project_num, project_num)
 			
 			project_num += 1
 			
 		content += '<div class="projectEnd"></div>'
 		return template.render(content = content)
-		
-	@cherrypy.expose
-	def project(self, project_id):
-		content = project_id
-		return project_template.render(content = content)		
 
-cherrypy.quickstart(PortfolioSite(), '/', '/home/xirov/sdu/interaktionsdesign/project/portfoliosite.conf')
+cherrypy.config.update({
+    #'environment': 'production',
+    #'log.screen': True,
+    'server.socket_host': '127.0.0.1',
+    'server.socket_port': 31623,
+})
+
+cherrypy.quickstart(PortfolioSite(), '/', '/home/xirov/webapps/portfoliosite/portfoliosite.conf')

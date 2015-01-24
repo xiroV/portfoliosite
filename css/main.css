@@ -253,3 +253,7 @@ a.project img {
 .projectEnd {
 	border-bottom: 1px solid #444;
 }
+
+.center {
+	text-align: center;
+}
