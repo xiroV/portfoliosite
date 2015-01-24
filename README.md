@@ -1,3 +1,6 @@
+## NOTICE
+This project was used as a project for a course on Interaction Design, and is not under development anymore. Feel free to dive in.
+
 ## About
 Project for the Interaction Design course.
 
@@ -27,3 +30,5 @@ If no errors occurs, the website should be accessible at
 localhost:8080
 ```
 
+## References
+We've made use of the fancyBox jQuery lightbox (http://fancyapps.com/fancybox/), which is awesome!	
